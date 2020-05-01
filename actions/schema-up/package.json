@@ -3,12 +3,16 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "actions-toolkit": "2.1.0",
     "graphql": "14.4.2",
     "node-fetch": "2.6.0",
-    "relay-compiler": "5.0.0"
-  }
+    "relay-compiler": "5.0.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
