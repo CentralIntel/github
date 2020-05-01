@@ -16,7 +16,9 @@
     "report:coverage": "nyc report --reporter=cobertura --reporter=html --reporter=lcovonly",
     "lint": "eslint --max-warnings 0 test lib",
     "fetch-schema": "node script/fetch-schema",
-    "relay": "relay-compiler --src ./lib --schema graphql/schema.graphql"
+    "relay": "relay-compiler --src ./lib --schema graphql/schema.graphql",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "atom": ">=1.37.0"
@@ -75,7 +77,8 @@
     "what-the-diff": "0.6.0",
     "what-the-status": "1.0.3",
     "whats-my-line": "0.1.1",
-    "yubikiri": "2.0.0"
+    "yubikiri": "2.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@atom/mocha-test-runner": "1.6.0",
@@ -207,7 +210,10 @@
     "remoteFetchProtocol": {
       "type": "string",
       "default": "https",
-      "enum": ["https", "ssh"],
+      "enum": [
+        "https",
+        "ssh"
+      ],
       "description": "Transport protocol to prefer when creating a new git remote"
     }
   },
@@ -227,5 +233,6 @@
       "electron-link",
       "electron-mksnapshot"
     ]
-  }
+  },
+  "snyk": true
 }
