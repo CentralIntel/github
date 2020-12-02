@@ -9,6 +9,6 @@
     "actions-toolkit": "2.1.0",
     "graphql": "14.4.2",
     "node-fetch": "2.6.0",
-    "relay-compiler": "5.0.0"
+    "relay-compiler": "8.0.0"
   }
 }
